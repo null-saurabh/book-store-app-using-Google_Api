@@ -69,7 +69,7 @@ class TopSellerBookDesign extends StatelessWidget {
             bookDetail.volumeInfo!.authors == null
                 ?const Text("No Author Details")
                 :Text(
-              bookDetail.volumeInfo!.authors!.join(', '),
+              bookDetail.volumeInfo!.authors!.join(' '),
               maxLines: 1,
               textAlign: TextAlign.center,
               style: TextStyle(

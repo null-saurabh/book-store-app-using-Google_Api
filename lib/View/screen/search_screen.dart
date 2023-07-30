@@ -80,9 +80,9 @@ class SearchScreen extends SearchDelegate {
                               "Author: ${snapshot.data?.items![index].volumeInfo?.authors.join(" ")}",
                               style: const TextStyle(color: Colors.grey),
                             ),
-                           Text(
-                              "Published Date:${snapshot.data?.items![index].volumeInfo?.publishedDate} ",
-                              style: const TextStyle(color: Colors.grey))
+                      Text(
+                          "Published Date:${snapshot.data?.items![index].volumeInfo?.publishedDate} ",
+                          style: const TextStyle(color: Colors.grey))
                     ],
                   ),
                   title: Text(
@@ -100,7 +100,6 @@ class SearchScreen extends SearchDelegate {
         );
       },
     );
-
   }
 
   @override
@@ -154,7 +153,7 @@ class SearchScreen extends SearchDelegate {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Author: ${snapshot.data?.items![index].volumeInfo?.authors?.length != 0 ? snapshot.data?.items![index].volumeInfo?.authors![0] : "Not Found"}",
+                          "Author: ${snapshot.data?.items?[index].volumeInfo?.authors?.join(" ")}",
                           style: const TextStyle(color: Colors.grey),
                         ),
                         Text(

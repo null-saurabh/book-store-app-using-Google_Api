@@ -1,13 +1,15 @@
+import 'package:bookappforappavenger/View/screen/category_screen.dart';
 import 'package:bookappforappavenger/View/utils/homescreen_book_design.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreenCategory extends StatelessWidget {
 
-  const HomeScreenCategory({Key? key, required this.categoryName, required this.maxResult})
+  const HomeScreenCategory({Key? key, required this.categoryName, required this.maxResult, required this.position})
       : super(key: key);
 
   final String categoryName;
   final String maxResult;
+  final int position;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,12 @@ class HomeScreenCategory extends StatelessWidget {
               ),
               InkWell(
                 onTap:() {
-
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CategoryScreen(selectedList: position),
+                    ),
+                  );
                 },
                 child: const Icon(Icons.arrow_forward,color: Colors.blueAccent,),
               )

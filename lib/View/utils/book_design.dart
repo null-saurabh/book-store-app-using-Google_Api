@@ -67,7 +67,7 @@ class BookDesign extends StatelessWidget {
 
             ),
             Text(
-              "${books.items?[index].volumeInfo?.authors?.join(', ')}",
+              "${books.items?[index].volumeInfo?.authors?.join(' ')}",
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.left,

@@ -79,9 +79,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: screenWidth * 0.8,
                     child: const TopSellerBooks()
                   ),
-                  HomeScreenCategory(categoryName: "Fantasy & Fiction",maxResult: "6",),
-                  HomeScreenCategory(categoryName: "Arts",maxResult: "6"),
-                  HomeScreenCategory(categoryName: "Anime",maxResult: "6"),
+                  const HomeScreenCategory(categoryName: "Fantasy & Fiction",maxResult: "6",position: 4,),
+                  const HomeScreenCategory(categoryName: "Arts",maxResult: "6",position: 3,),
+                  const HomeScreenCategory(categoryName: "Anime",maxResult: "6",position: 2,),
 
                 ],
               ),

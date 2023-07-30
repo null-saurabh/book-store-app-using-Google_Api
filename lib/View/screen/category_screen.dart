@@ -3,26 +3,34 @@ import 'package:bookappforappavenger/View/utils/categoryscreen_book_design.dart'
 import 'package:flutter/material.dart';
 
 class CategoryScreen extends StatefulWidget {
-  const CategoryScreen({super.key});
+  final int selectedList;
+  const CategoryScreen({super.key, this.selectedList = 0});
 
   @override
   State<CategoryScreen> createState() => _CategoryScreenState();
 }
 
 class _CategoryScreenState extends State<CategoryScreen> {
-  int selectedList = 0;
+  late int selectedList;
   List categoryList = [
     "Free",
     "Paid",
+    "Anime",
+    "Arts",
+    "Fiction",
     "Novels",
     "Biography",
     "Business",
     "Children",
     "Cookery",
-    "Fiction",
-    "Arts",
     "Science",
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    selectedList = widget.selectedList;
+  }
 
   @override
   Widget build(BuildContext context) {
