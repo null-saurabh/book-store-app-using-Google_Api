@@ -19,13 +19,7 @@ class _TopSellerBooksState extends State<TopSellerBooks> {
         builder: (context,snapshot){
           if(snapshot.hasData){
             Books books = snapshot.data;
-            // int item;
-            // if (books.totalItems! < 10){
-            //   item = books.totalItems!;
-            // }
-            // else{
-            //   item = 12;
-            // }
+
             return CarouselSlider.builder(
               itemCount: books.items!.length,
               itemBuilder: (context, index,_) {
